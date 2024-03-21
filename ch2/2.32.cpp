@@ -4,8 +4,10 @@ int main() {
   //int null = 0, *p = null;  // Error: type mismatch
 
   // Method 1
-  const int null1 = 0;
-  int *p1 = null1;
+ // const int null1 = 0;
+//   int *p1 = null1;  //also an error
+// error: invalid conversion from 'int' to 'int*' [-fpermissive]
+
 
   // Method 2
   int *p2 = nullptr;
@@ -16,9 +18,9 @@ int main() {
   // Method 4 (may need include `cstdlib`)
   int *p4 = NULL;
 
-  // Method 5
-  constexpr int null2 = 0;
-  int *p5 = null2;
+  // // Method 5
+  // constexpr int null2 = 0;
+  // int *p5 = null2; // Error :invalid conversion from 'int' to 'int*' [-fpermissive]
 
   return 0;
 }
